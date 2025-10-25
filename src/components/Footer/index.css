@@ -1,0 +1,140 @@
+/* Footer Container */
+footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.brand-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.school-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Social Links */
+.social-links a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3b82f6;
+}
+
+/* Quick Links */
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 8px;
+}
+
+.quick-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: #3b82f6;
+}
+
+/* Contact Info */
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.contact-item span {
+  margin-right: 8px;
+}
+
+/* Newsletter */
+.newsletter-description {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 8px;
+  width: calc(100% - 100px);
+  max-width: 250px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #2563eb;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+
+  .newsletter button {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
