@@ -1,140 +1,199 @@
-/* Footer Container */
+:root {
+  --footer-bg: #0f172a;
+  --footer-text: #cbd5e1;
+  --footer-muted: #94a3b8;
+  --footer-accent: #3b82f6;
+  --footer-dark: #1e293b;
+}
+
+a {
+  color: var(--footer-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover,
+a:focus {
+  color: var(--footer-accent);
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 footer {
-  background-color: #1a1a1a;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  padding: 40px 20px 20px;
+  background-color: var(--footer-bg);
+  padding: 48px 24px 32px;
+  color: var(--footer-text);
 }
 
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
 }
 
-/* Footer Sections */
 .footer-section {
-  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .brand-name {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--footer-text);
 }
 
 .school-logo {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .about-text {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: var(--footer-muted);
+  max-width: 320px;
 }
 
-/* Social Links */
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
 .social-links a {
-  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background-color: var(--footer-dark);
+  color: var(--footer-text);
+  font-size: 18px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--footer-accent);
   color: #fff;
-  font-size: 1.2rem;
-  transition: color 0.3s;
 }
 
-.social-links a:hover {
-  color: #3b82f6;
+.footer-heading,
+.footer-section h3 {
+  font-weight: 600;
+  color: var(--footer-text);
 }
 
-/* Quick Links */
 .quick-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.quick-links li {
-  margin-bottom: 8px;
+.quick-links li a {
+  font-size: 0.95rem;
+  color: var(--footer-muted);
+  transition: color 0.3s ease;
 }
 
-.quick-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s;
+.quick-links li a:hover {
+  color: var(--footer-accent);
 }
 
-.quick-links a:hover {
-  color: #3b82f6;
-}
-
-/* Contact Info */
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--footer-muted);
 }
 
-.contact-item span {
-  margin-right: 8px;
+.contact-item a {
+  color: inherit;
 }
 
-/* Newsletter */
 .newsletter-description {
+  font-size: 0.9rem;
+  color: var(--footer-muted);
   margin-bottom: 10px;
-  font-size: 0.95rem;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .newsletter input[type="email"] {
-  padding: 8px;
-  width: calc(100% - 100px);
-  max-width: 250px;
-  border: none;
-  border-radius: 4px 0 0 4px;
+  flex-grow: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--footer-dark);
+  background-color: var(--footer-dark);
+  color: var(--footer-text);
+  font-size: 1rem;
+}
+
+.newsletter input[type="email"]:focus {
+  border-color: var(--footer-accent);
   outline: none;
 }
 
 .newsletter button {
-  padding: 8px 15px;
+  background-color: var(--footer-accent);
   border: none;
-  background-color: #3b82f6;
-  color: #fff;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.newsletter button:hover {
+.newsletter button:hover,
+.newsletter button:focus {
   background-color: #2563eb;
 }
 
-/* Footer Bottom */
+.subscribe-message {
+  margin-top: 12px;
+  font-size: 1.35rem;
+  color: green;
+}
+
 .footer-bottom {
-  text-align: center;
-  margin-top: 30px;
+  border-top: 1px solid var(--footer-dark);
+  margin-top: 48px;
+  padding-top: 24px;
   font-size: 0.85rem;
-  color: #bbb;
+  text-align: center;
+  color: var(--footer-muted);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+@media (min-width: 767px) {
   .footer-inner {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
   }
-
-  .newsletter input[type="email"] {
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 4px;
-  }
-
-  .newsletter button {
-    width: 100%;
-    border-radius: 4px;
+  .footer-section {
+    align-items: flex-start;
   }
 }
 
+@media (min-width: 1440px) {
+  footer {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}

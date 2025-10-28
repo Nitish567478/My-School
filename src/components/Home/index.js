@@ -1,30 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../Header";
 import Slider from "../Slider";
 import Footer from "../Footer";
-
+import JoinSection from "../JoinSection";
 import awardIcon from "../AllImage/3.jpg";
-import "./index.css";
+import "./home.css";
 
 const Home = () => {
-  const [activeModal, setActiveModal] = useState(null);
-  const [admissionSuccess, setAdmissionSuccess] = useState(false);
-  const [visitSuccess, setVisitSuccess] = useState(false);
-
-  const openModal = (type) => setActiveModal(type);
-  const closeModal = () => setActiveModal(null);
-
-  const handleAdmissionSubmit = (e) => {
-    e.preventDefault();
-    setAdmissionSuccess(true);
-    setTimeout(() => setAdmissionSuccess(false), 3000);
-  };
-
-  const handleVisitSubmit = (e) => {
-    e.preventDefault();
-    setVisitSuccess(true);
-    setTimeout(() => setVisitSuccess(false), 3000);
-  };
 
   return (
     <div className="home-container">
@@ -123,30 +105,31 @@ const Home = () => {
 
       {/* Academic Section */}
       <section className="academic-section">
-        <div className="container">
+        <div className="containers">
           <div className="text-center">
-            <h1 className="academic-heading">Academic Excellence at Every Level</h1>
-            <p className="academic-description">
+            <h1 className="academic-headings">Academic Excellence at Every Level</h1>
+            <p className="academic-descriptions">
               From foundational learning to advanced academics, we offer
               comprehensive programs designed to unlock every student's potential.
             </p>
           </div>
 
-          <div className="card-grid">
+          <div className="card-grids">
             {/* Primary Education */}
-            <div className="academic-card">
-              <div className="card-header">
-                <div className="icon-badge-fis">
-                  <div className="award-icon-fis">
+            <div className="academic-cards">
+              <div className="card-headers">
+                <div className="icon-badge-fiss">
+                  <div className="award-icon-fiss">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-book" viewBox="0 0 16 16">
                       <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
                     </svg>
                   </div>
                 </div>
-                <h3 className="academic-card-header-name">Primary Education</h3>
-                <p className="academic-card-header-class">Classes Pre-Nursery – V</p>
+                <h3 className="academic-card-header-names">Primary Education</h3>
+                <p className="academic-card-header-classs">Classes Pre-Nursery – V</p>
               </div>
-              <div className="card-body">
+              <hr />
+              <div className="card-bodys">
                 <p>
                   Building strong foundations with play-based learning, creativity,
                   and basic academic skills.
@@ -160,19 +143,20 @@ const Home = () => {
             </div>
 
             {/* Middle School */}
-            <div className="academic-card">
-              <div className="card-header">
-                <div className="icon-badge-sec">
-                  <div className="award-icon-sec">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-people" viewBox="0 0 16 16">
-                      <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13h3c0-1.1.436-2.207 1.09-3.083a6.977 6.977 0 0 0-.17-.042 7.72 7.72 0 0 0-2-.875Z" />
+            <div className="academic-cards">
+              <div className="card-headers">
+                <div className="icon-badge-secs">
+                  <div className="award-icon-secs">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                      <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/>
                     </svg>
                   </div>
                 </div>
-                <h3 className="academic-card-header-name">Middle School</h3>
-                <p className="academic-card-header-class">Classes VI – VIII</p>
+                <h3 className="academic-card-header-names">Middle School</h3>
+                <p className="academic-card-header-classs">Classes VI – VIII</p>
               </div>
-              <div className="card-body">
+              <hr />
+              <div className="card-bodys">
                 <p>
                   Encouraging analytical thinking and practical knowledge to prepare
                   for higher education.
@@ -190,14 +174,16 @@ const Home = () => {
               <div className="card-header">
                 <div className="icon-badge-sec">
                   <div className="award-icon-sec">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-mortarboard" viewBox="0 0 16 16">
-                      <path d="M8.211.86a.5.5 0 0 0-.422 0L1 3.204 8 6.042l7-2.838-6.789-2.344zM8 7.5L1 4.5v3l7 2.5 7-2.5v-3l-7 3zm0 1.5l-8-3v3c0 .667.334 1.5 1 2l7 3 7-3c.667-.5 1-1.333 1-2v-3l-8 3z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                      <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+                      <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
                     </svg>
                   </div>
                 </div>
                 <h3 className="academic-card-header-name">Senior School</h3>
                 <p className="academic-card-header-class">Classes IX – XII</p>
               </div>
+              <hr />
               <div className="card-body">
                 <p>
                   Preparing students for board exams, higher education, and career readiness
@@ -215,30 +201,58 @@ const Home = () => {
       </section>
 
       {/* Stand Section */}
-      <section className="stand-section">
-        <div className="container">
-          <h1 className="stand-heading">Why Choose Us?</h1>
-          <p className="stand-description">
-            We stand for holistic development, academic excellence, and a nurturing
-            environment for every child.
-          </p>
-          <div className="stand-cards">
-            {[
-              "Innovative Learning Methods",
-              "Highly Qualified Faculty",
-              "Safe & Secure Campus",
-              "Strong Community Values"
-            ].map((text, index) => (
-              <div className="stand-card" key={index}>
-                <p>{text}</p>
+      <section class="stand-section">
+        <h1 class="stand-heading">Why Choose Us?</h1>
+        <p class="stand-discussion">Our core values guide everything we do, shaping not just academic success but character development.</p>
+
+        <div class="stand-container">
+          <div class="stand-grid">
+            <div class="stand-icon stand-icon-fis">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bullseye" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+                <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+              </svg>
+            </div>
+              <h2 class="stand-grid-heading">Excellence</h2>
+              <p class="stand-grid-para">Striving for the highest standards in everything we do.</p>
+          </div>
+
+          <div class="stand-grid">
+              <div class="stand-icon stand-icon-sec">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+                </svg>
               </div>
-            ))}
+              <h2 class="stand-grid-heading">Compassion</h2>
+              <p class="stand-grid-para">Fostering empathy, kindness, and care for others.</p>
+          </div>
+
+          <div class="stand-grid">
+              <div class="stand-icon stand-icon-tir">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16">
+                  <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/>
+                </svg>
+              </div>
+              <h2 class="stand-grid-heading">Innovation</h2>
+              <p class="stand-grid-para">Encouraging creativity and forward-thinking approaches.</p>
+          </div>
+
+          <div class="stand-grid">
+              <div class="stand-icon stand-icon-for">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
+                  <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                </svg>
+              </div>
+              <h2 class="stand-grid-heading">Integrity</h2>
+              <p class="stand-grid-para">Building character through honesty and moral principles.</p>
           </div>
         </div>
       </section>
 
       {/* Awards Section */}
-      <section className="awards-section">
+      {/* <section className="awards-section">
         <div className="container">
           <h1 className="awards-heading">Our Achievements</h1>
           <div className="awards-grid">
@@ -251,121 +265,10 @@ const Home = () => {
             )}
           </div>
         </div>
-      </section>
+        </section> */}
 
-      {/* Join Section */}
-      <section className="join-section">
-      <div className="join-container">
-        <h1 className="join-heading">Ready to Join Our Family?</h1>
-        <p className="join-discussion">
-          Take the first step towards your child's bright future. Schedule a visit
-          or apply for admission today.
-        </p>
+      <JoinSection />
 
-        <div className="join-button">
-          <button className="apply-btn" onClick={() => openModal("admission")}>
-            Apply for Admission
-          </button>
-          <button className="visit-btn" onClick={() => openModal("visit")}>
-            Schedule Campus Visit
-          </button>
-        </div>
-      </div>
-
-      {/* Admission Form Modal */}
-      {activeModal === "admission" && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Admission Form</h2>
-            <form onSubmit={handleAdmissionSubmit}>
-              <input type="text" name="fullName" placeholder="Full Name" required />
-              <input type="date" name="dob" required />
-              <select name="gender" required>
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-              <input type="email" name="email" placeholder="Email Address" required />
-              <input type="tel" name="phone" placeholder="Phone Number" required />
-              <textarea
-                name="visitorAddress"
-                placeholder="Your Address"
-                rows="3"
-                required
-              ></textarea>
-              <select name="admissionClass" required>
-                <option value="">Select Class</option>
-                {[
-                  "Nursery",
-                  "KG",
-                  "1st",
-                  "2nd",
-                  "3rd",
-                  "4th",
-                  "5th",
-                  "6th",
-                  "7th",
-                  "8th",
-                  "9th",
-                  "10th",
-                  "11th",
-                  "12th",
-                ].map((cls, i) => (
-                  <option key={i} value={cls.toLowerCase()}>
-                    {cls} Grade
-                  </option>
-                ))}
-              </select>
-              <input
-                type="text"
-                name="guardianName"
-                placeholder="Parent/Guardian Name"
-                required
-              />
-              <input
-                type="tel"
-                name="guardianContact"
-                placeholder="Parent/Guardian Contact"
-                required
-              />
-              <label>
-                <input type="checkbox" name="consent" required /> I confirm that the
-                information is correct.
-              </label>
-              <button type="submit">Submit Application</button>
-            </form>
-            {admissionSuccess && (
-              <div className="success-message">Form submitted successfully!</div>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* Visit Form Modal */}
-      {activeModal === "visit" && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeModal}>
-              &times;
-            </span>
-            <h2>Schedule a Campus Visit</h2>
-            <form onSubmit={handleVisitSubmit}>
-              <input type="text" name="visitorName" placeholder="Your Name" required />
-              <input type="date" name="visitDate" required />
-              <input type="time" name="visitTime" required />
-              <button type="submit">Book Visit</button>
-            </form>
-            {visitSuccess && (
-              <div className="success-message">Form submitted successfully!</div>
-            )}
-          </div>
-        </div>
-      )}
-    </section>
       <Footer />
     </div>
   );
